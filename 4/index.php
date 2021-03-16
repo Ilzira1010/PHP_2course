@@ -9,7 +9,7 @@ function outputText()
         $text = $_POST["text"];
         $textArray = explode("\n", $text);
         $print_text = jsonText($textArray);
-        print json_encode($print_text, JSON_UNESCAPED_UNICODE);
+        print json_encode($print_text, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 //        print json_encode($print_text, JSON_PRETTY_PRINT);
     } else {
         include "task4.html";
@@ -45,7 +45,7 @@ function jsonText($textArray)
 
     $arr2 = ["sum" => $sum, "data" => $arr];
     $gen = generator($arrGenerator, $arr2);
-    print json_encode( $gen, JSON_UNESCAPED_UNICODE) . "\n" . "\n";
+    print sprintf("%s\n\n</br>", json_encode($gen, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
     return $arr2;
 }
 
