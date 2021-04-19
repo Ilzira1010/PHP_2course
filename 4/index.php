@@ -10,14 +10,12 @@ function outputText()
         $textArray = explode("\n", $text);
         $print_text = jsonText($textArray);
         print json_encode($print_text, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-//        print json_encode($print_text, JSON_PRETTY_PRINT);
     } else {
         include "task4.html";
     }
 }
 
 outputText();
-
 function jsonText($textArray)
 {
     $arr = [];

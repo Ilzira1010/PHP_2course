@@ -33,11 +33,24 @@ if (isset($_POST['mon'])) {
         if ($weekday == 6) {
             $countweek++;
         }
-
-
     }
 
     echo "<table border=2>";
+
+    $arr2 = array('пн','вт','ср','чт','пт','сб','вс');
+    for ($i = 0; $i < count($arr2); $i++) {
+
+        echo "<tr>";
+
+                if (!empty($arr2[$i])) {
+                    echo "$arr2[$i]";
+                if ($i == 6 || $i = 7)  {
+                    echo "<td><font color=red>" . $arr2[$i] . "</font></td>";
+                } else echo "<td>" . $arr2[$i] . "</td>";
+
+            } else echo "<td></td>";
+        echo "</tr>";
+    }
     for ($i = 0; $i < count($arr); $i++) {
 
         echo "<tr>";
