@@ -18,7 +18,7 @@ foreach ($Class_exception as $generator) {
     try {
         $exc->$generator();
     } catch (Exception1 $e) {
-        echo $e->getMessage() . "\n" ;
+        echo $e->getMessage() . "\n";
     } catch (Exception2 $e) {
         echo $e->getMessage() . "\n";
     } catch (Exception3 $e) {
@@ -27,7 +27,7 @@ foreach ($Class_exception as $generator) {
         echo $e->getMessage() . "\n";
     } catch (Exception5 $e) {
         echo $e->getMessage() . "\n";
-    }catch (Exception $e){
+    } catch (Exception $e) {
         echo $e;
     }
 }
